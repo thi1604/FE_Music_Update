@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "66f2c7f92c41438d7b01e36a"
+  },
+  "userId": "66f2b879133786092309e295",
+  "songId": "66ecf148c166e35bb359200f",
+  "deleted": true,
+  "createdAt": {
+    "$date": "2024-09-24T14:08:57.746Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-25T04:19:22.829Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66f38f2f43a106c386eb6405"
+  },
+  "userId": "66f29444b351466af1366d12",
+  "songId": "66ecf148c166e35bb359200f",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2024-09-25T04:18:55.555Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-28T08:43:34.332Z"
+  },
+  "__v": 0
+}]

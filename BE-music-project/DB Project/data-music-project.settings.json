@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "67c08f9085afc18b25c29482"
+  },
+  "websiteName": "Mờ Bê Bar",
+  "phone": "0397130248",
+  "address": "97 Man Thiện",
+  "email": "thibeo1604@gmail.com",
+  "copyright": "Copyright 2024 ThiBeoMusic",
+  "createdAt": {
+    "$date": "2025-02-27T16:15:12.169Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T08:46:39.699Z"
+  },
+  "__v": 0
+}]

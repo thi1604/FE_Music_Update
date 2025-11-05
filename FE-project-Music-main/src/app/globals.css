@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Quicksand", serif;
+}
+
+.container {
+  overflow-x: hidden;
+}
+
+.inner-show-menu.show {
+  display: block;
+}
+
+::-webkit-scrollbar {
+  width: 3px; /* Chiều rộng dọc */
+  height: 3px; /* Chiều cao ngang */
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e1e; /* Màu nền */
+  border-radius: 10px; /* Bo góc */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00adef; /* Màu thanh cuộn */
+  border-radius: 10px;
+}
+
+
+.range-sm::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #00ADEF;
+  cursor: pointer;
+  box-shadow: 0px 0px 8px 0px #000000EB;
+}
+
+.range-sm::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #00ADEF;
+  cursor: pointer;
+  box-shadow: 0px 0px 8px 0px #000000EB;
+}
+
+.range-sm::-webkit-slider-thumb:hover {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #00ADEF;
+  cursor: pointer;
+  box-shadow: 0px 0px 8px 0px #000000EB;
+}
+
+.range-sm::-moz-range-thumb:hover {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #00ADEF;
+  cursor: pointer;
+  box-shadow: 0px 0px 8px 0px #000000EB;
+}
+
+
+.inner-box-audio .inner-action-1 .inner-playing {
+  display: block;
+}
+
+.inner-box-audio .inner-action-1 .inner-pause {
+  display: none;
+}
+
+.inner-box-audio.play .inner-action-1 .inner-playing {
+  display: none;
+}
+
+.inner-box-audio.play .inner-action-1 .inner-pause {
+  display: block;
+}
+
+/* Box am luong */
+.inner-box-audio .inner-volume .inner-mute {
+  display: block;
+}
+
+.inner-box-audio .inner-volume .inner-noise {
+  display: none;
+}
+
+.inner-box-audio .inner-volume.play .inner-noise  {
+  display: block;
+}
+
+.inner-box-audio .inner-volume.play .inner-mute {
+  display: none;
+}
+
+.inner-love {
+  color: #FFFFFF;
+}
+.inner-love.love {
+  color: #00ADEF;
+}
+
+.inner-action-1 .inner-repeat-song.active {
+  color: #00ADEF;
+}

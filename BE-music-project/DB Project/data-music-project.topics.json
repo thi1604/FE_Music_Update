@@ -1,0 +1,163 @@
+[{
+  "_id": {
+    "$oid": "653b3f79884a78f7ecf902e4"
+  },
+  "title": "Hip-Hop",
+  "avatar": "https://backend.daca.vn/assets/images/hip-hop.jpg",
+  "description": "Tổng hợp nhạc Hip-Hop mới nhất",
+  "status": "inactive",
+  "slug": "hip-hop",
+  "deleted": false,
+  "outStanding": true,
+  "updatedAt": {
+    "$date": "2025-06-19T10:43:35.683Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "653b3f79884a78f7ecf902e2"
+  },
+  "title": "Bolero",
+  "avatar": "https://backend.daca.vn/assets/images/bolero.jpg",
+  "description": "Tổng hợp nhạc Bolero mới nhất",
+  "status": "active",
+  "slug": "bolero",
+  "deleted": false,
+  "outStanding": true,
+  "updatedAt": {
+    "$date": "2025-03-04T06:02:05.221Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "653b3f79884a78f7ecf902e1"
+  },
+  "title": "Nhạc trẻ",
+  "avatar": "https://backend.daca.vn/assets/images/nhac-tre.jpg",
+  "description": "<p>Tổng hợp nhạc Nhạc trẻ mới nhất</p>",
+  "status": "active",
+  "slug": "nhac-tre",
+  "deleted": false,
+  "outStanding": true,
+  "updatedAt": {
+    "$date": "2025-06-15T14:33:09.549Z"
+  },
+  "idPersonUpdated": "684ed35250e5f7edab7a387f"
+},
+{
+  "_id": {
+    "$oid": "653b3f79884a78f7ecf902e3"
+  },
+  "title": "Remix",
+  "avatar": "https://backend.daca.vn/assets/images/remix.jpg",
+  "description": "<p>Tổng hợp nhạc Remix mới nhất</p>",
+  "status": "active",
+  "slug": "remix",
+  "deleted": false,
+  "outStadinng": false,
+  "outStanding": true,
+  "updatedAt": {
+    "$date": "2025-02-26T14:44:37.962Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "653b3f79884a78f7ecf902e6"
+  },
+  "title": "Acoustic",
+  "avatar": "https://backend.daca.vn/assets/images/acoustic.jpg",
+  "description": "<p>Tổng hợp nhạc Acoustic mới nhất</p>",
+  "status": "active",
+  "slug": "acoustic",
+  "deleted": false,
+  "outStanding": true,
+  "updatedAt": {
+    "$date": "2025-02-26T14:45:15.866Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "653b3f79884a78f7ecf902e7"
+  },
+  "title": "Rock",
+  "avatar": "https://backend.daca.vn/assets/images/rock.jpg",
+  "description": "<p>Tổng hợp nhạc Rock mới nhất</p>",
+  "status": "active",
+  "slug": "rock",
+  "deleted": false,
+  "outStanding": true,
+  "updatedAt": {
+    "$date": "2025-02-26T14:39:10.071Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "653b3f79884a78f7ecf902e5"
+  },
+  "title": "Latin",
+  "avatar": "https://backend.daca.vn/assets/images/latin.jpg",
+  "description": "Tổng hợp nhạc Latin mới nhất",
+  "status": "active",
+  "slug": "latin",
+  "deleted": false,
+  "outStanding": false
+},
+{
+  "_id": {
+    "$oid": "67bed88827e534e7a040bf37"
+  },
+  "title": "Lau fine",
+  "description": "<p>Tổng hợp nhạc <strong>Lofi </strong>mới nhất</p>",
+  "status": "active",
+  "outStanding": false,
+  "deleted": true,
+  "createdAt": {
+    "$date": "2025-02-26T09:02:00.888Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T15:30:56.800Z"
+  },
+  "slug": "lau-fine",
+  "__v": 0,
+  "avatar": "http://res.cloudinary.com/dddqj4xho/image/upload/v1740561860/n4wze3qcllsakb6d6gy3.webp",
+  "idPersonDeleted": "67c06f93e8821d09f996466b"
+},
+{
+  "_id": {
+    "$oid": "67bed970602aa7ef2718d71e"
+  },
+  "title": "THi beo",
+  "description": "<p>qweqwe</p>",
+  "status": "inactive",
+  "outStanding": false,
+  "deleted": true,
+  "createdAt": {
+    "$date": "2025-02-26T09:05:52.298Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T15:31:00.887Z"
+  },
+  "slug": "thi-beo",
+  "__v": 0,
+  "idPersonDeleted": "67c06f93e8821d09f996466b"
+},
+{
+  "_id": {
+    "$oid": "67bed9c771f0081df8af290f"
+  },
+  "title": "aaaaa",
+  "avatar": "http://res.cloudinary.com/dddqj4xho/image/upload/v1740560839/gimt237g68v6wyetoolo.webp",
+  "description": "<p>asdasdasd</p>",
+  "status": "active",
+  "outStanding": false,
+  "deleted": true,
+  "createdAt": {
+    "$date": "2025-02-26T09:07:19.251Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T15:30:52.906Z"
+  },
+  "slug": "aaaaa",
+  "__v": 0,
+  "idPersonDeleted": "67c06f93e8821d09f996466b"
+}]

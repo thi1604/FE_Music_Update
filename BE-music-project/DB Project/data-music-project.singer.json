@@ -1,0 +1,217 @@
+[{
+  "_id": {
+    "$oid": "653b765c884a78f7ecf902ed"
+  },
+  "fullName": "Wrxdie",
+  "avatar": "http://res.cloudinary.com/dddqj4xho/image/upload/v1740585818/qz1ndijtpasy1bzw1m3k.jpg",
+  "status": "active",
+  "slug": "wrxdie",
+  "deleted": false,
+  "outStanding": false,
+  "description": "<p>ABCXYZ</p>",
+  "updatedAt": {
+    "$date": "2025-03-03T10:12:01.803Z"
+  },
+  "idPersonUpdated": "67c07010e8821d09f9964675"
+},
+{
+  "_id": {
+    "$oid": "653b765c884a78f7ecf902ef"
+  },
+  "fullName": "TLong",
+  "avatar": "https://backend.daca.vn/assets/images/tlong.jpg",
+  "status": "active",
+  "slug": "tlong",
+  "deleted": true,
+  "outStanding": false,
+  "description": "ABCXYZ",
+  "idPersonDeleted": "67c06f93e8821d09f996466b",
+  "updatedAt": {
+    "$date": "2025-02-28T15:27:55.784Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "653b765c884a78f7ecf902ee"
+  },
+  "fullName": "Dương Domic",
+  "avatar": "http://res.cloudinary.com/dddqj4xho/image/upload/v1740586259/ctucfl0wlf42em6a0bwx.jpg",
+  "status": "active",
+  "slug": "duong-domic",
+  "deleted": false,
+  "outStanding": true,
+  "description": "<p>ABCXYZ</p>",
+  "updatedAt": {
+    "$date": "2025-02-26T16:10:59.617Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "653b765c884a78f7ecf902ec"
+  },
+  "fullName": "Tăng Duy Tân",
+  "avatar": "https://backend.daca.vn/assets/images/tang-duy-tan.jpg",
+  "status": "active",
+  "slug": "tang-duy-tan",
+  "deleted": false,
+  "outStanding": true,
+  "description": "ABCXYZ",
+  "updatedAt": {
+    "$date": "2025-03-04T06:11:27.034Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "653b765c884a78f7ecf902f0"
+  },
+  "fullName": "Andree Right Hand ",
+  "avatar": "http://res.cloudinary.com/dddqj4xho/image/upload/v1740586146/ebc963cbephbdfhqhkjp.jpg",
+  "status": "active",
+  "slug": "andree-right-hand",
+  "deleted": false,
+  "outStanding": false,
+  "description": "<p>ABCXYZ</p>",
+  "updatedAt": {
+    "$date": "2025-02-26T16:09:06.967Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bf34fa9ccef2c14ea399e1"
+  },
+  "fullName": "Sơn Tùng MTP",
+  "avatar": "http://res.cloudinary.com/dddqj4xho/image/upload/v1740584710/jfinvkymrqschsolslpa.jpg",
+  "status": "active",
+  "outStanding": true,
+  "deleted": false,
+  "description": "<p>Sếp</p>",
+  "createdAt": {
+    "$date": "2025-02-26T15:36:26.186Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-26T15:45:10.181Z"
+  },
+  "slug": "son-tung-mtp",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67bf39b10fb620b2046111e4"
+  },
+  "fullName": "Hiếu Thứ 2",
+  "avatar": "http://res.cloudinary.com/dddqj4xho/image/upload/v1740585393/e6sebenjm62fdg3prrol.jpg",
+  "status": "active",
+  "outStanding": false,
+  "deleted": false,
+  "description": "<p><span style=\"color: #2dc26b;\">H&aacute;i Thứ Hi&ecirc;u</span></p>",
+  "createdAt": {
+    "$date": "2025-02-26T15:56:33.656Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-26T15:56:33.656Z"
+  },
+  "slug": "hieu-thu-2",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c1e2b63cdb3948fa79413a"
+  },
+  "fullName": "MCK",
+  "avatar": "http://res.cloudinary.com/dddqj4xho/image/upload/v1740759733/ogp7q0hbkfdwvof5iozb.jpg",
+  "status": "active",
+  "outStanding": false,
+  "deleted": false,
+  "idPersonCreated": "67c06f93e8821d09f996466b",
+  "description": "<p>MCKKK</p>",
+  "createdAt": {
+    "$date": "2025-02-28T16:22:14.289Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T16:22:14.289Z"
+  },
+  "slug": "mck",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c290ac5c30b5878dd97997"
+  },
+  "fullName": "Justatee",
+  "avatar": "http://res.cloudinary.com/dddqj4xho/image/upload/v1740804267/marktm3tmzzj66kpegeb.jpg",
+  "status": "active",
+  "outStanding": false,
+  "deleted": false,
+  "idPersonCreated": "67c06f93e8821d09f996466b",
+  "description": "<p>suyy</p>",
+  "createdAt": {
+    "$date": "2025-03-01T04:44:28.299Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T04:44:28.299Z"
+  },
+  "slug": "justatee",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c676cac4306d06c9db1cdb"
+  },
+  "fullName": "Karik",
+  "avatar": "http://res.cloudinary.com/dddqj4xho/image/upload/v1741059786/z3fwv1in0hsnhynu65rn.jpg",
+  "status": "active",
+  "outStanding": true,
+  "deleted": false,
+  "idPersonCreated": "67c06f93e8821d09f996466b",
+  "description": "Ca x",
+  "createdAt": {
+    "$date": "2025-03-04T03:43:06.485Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T01:17:07.509Z"
+  },
+  "slug": "karik",
+  "__v": 0,
+  "idPersonUpdated": "67c06f93e8821d09f996466b"
+},
+{
+  "_id": {
+    "$oid": "67c6789bc4306d06c9db1d98"
+  },
+  "fullName": "Đen Vâu",
+  "avatar": "http://res.cloudinary.com/dddqj4xho/image/upload/v1741060251/wd1tyvp6xoz9zsttyjdz.jpg",
+  "status": "active",
+  "outStanding": true,
+  "deleted": false,
+  "idPersonCreated": "67c06f93e8821d09f996466b",
+  "description": "Đen",
+  "createdAt": {
+    "$date": "2025-03-04T03:50:51.976Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-04T06:02:42.516Z"
+  },
+  "slug": "den-vau",
+  "__v": 0,
+  "idPersonUpdated": "67c06f93e8821d09f996466b"
+},
+{
+  "_id": {
+    "$oid": "67c68bd3c950172317b25b11"
+  },
+  "fullName": "Thi Béo",
+  "avatar": "http://res.cloudinary.com/dddqj4xho/image/upload/v1741065171/k1sjmwjytcuoydnivgbd.webp",
+  "status": "inactive",
+  "outStanding": false,
+  "deleted": false,
+  "idPersonCreated": "67c06f93e8821d09f996466b",
+  "description": "ad",
+  "createdAt": {
+    "$date": "2025-03-04T05:12:51.993Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-04T05:45:15.040Z"
+  },
+  "slug": "thi-beo",
+  "__v": 0
+}]

@@ -1,0 +1,342 @@
+[{
+  "_id": {
+    "$oid": "66f29444b351466af1366d12"
+  },
+  "fullName": "Thi Béoooo",
+  "email": "thibeo@gmail.com",
+  "password": "9a093e46c670a4e29073f3f313a7bad4",
+  "tokenUser": "gz971gKlzXmZiW49Y8Bf9oc7KkKwCD",
+  "avatar": "https://res.cloudinary.com/dddqj4xho/image/upload/v1722671580/0d64989794b1a4c9d89bff571d3d5842_jrbalx.jpg",
+  "status": "active",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2024-09-24T10:28:20.515Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-19T04:54:35.977Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66f2b879133786092309e295"
+  },
+  "fullName": "thi beo",
+  "email": "solodyhina97@eliotkids.com",
+  "password": "9a093e46c670a4e29073f3f313a7bad4",
+  "tokenUser": "jKevUDSIP1sFqyIu6Xkl4t87iUYW8P",
+  "avatar": "https://res.cloudinary.com/dddqj4xho/image/upload/v1722671580/0d64989794b1a4c9d89bff571d3d5842_jrbalx.jpg",
+  "status": "inactive",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2024-09-24T13:02:49.533Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-15T02:36:34.088Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67874a21e8a7fefce4af7177"
+  },
+  "fullName": "Le Van A",
+  "email": "levana@gmail.com",
+  "password": "a906449d5769fa7361d7ecc6aa3f6d28",
+  "tokenUser": "vzcyQguoPUoFGzEGhMPPtyveFZd7ZQ",
+  "avatar": "https://res.cloudinary.com/dddqj4xho/image/upload/v1722671580/0d64989794b1a4c9d89bff571d3d5842_jrbalx.jpg",
+  "status": "active",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-01-15T05:39:45.891Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-27T03:26:23.370Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67874a66e8a7fefce4af717b"
+  },
+  "fullName": "Le Van AA",
+  "email": "levana123123@gmail.com",
+  "password": "a906449d5769fa7361d7ecc6aa3f6d28",
+  "tokenUser": "RW42JrsqT3LG9rP2lBdDUPhNPdyqzR",
+  "avatar": "https://res.cloudinary.com/dddqj4xho/image/upload/v1722671580/0d64989794b1a4c9d89bff571d3d5842_jrbalx.jpg",
+  "status": "active",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-01-15T05:40:54.774Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T05:25:24.085Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67875309c3fc281625ac99dd"
+  },
+  "fullName": "Le Van A",
+  "email": "levana3@gmail.com",
+  "password": "e4af109cbeb6360d5280811d3b441b56",
+  "tokenUser": "n8Ag4FIVV1vpxMhukNYUzxNEKep4Nj",
+  "avatar": "https://res.cloudinary.com/dddqj4xho/image/upload/v1722671580/0d64989794b1a4c9d89bff571d3d5842_jrbalx.jpg",
+  "status": "active",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-01-15T06:17:45.134Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-27T02:49:00.328Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b00fd49294fc5e4cc108c7"
+  },
+  "fullName": "Le Van A",
+  "email": "levana4@gmail.com",
+  "password": "9a093e46c670a4e29073f3f313a7bad4",
+  "tokenUser": "2S2c1MSlG0JtjmbTOgEwQMn3JCv60Z",
+  "avatar": "https://res.cloudinary.com/dddqj4xho/image/upload/v1722671580/0d64989794b1a4c9d89bff571d3d5842_jrbalx.jpg",
+  "status": "active",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-02-15T03:53:56.541Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-10T16:21:48.439Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b010fb9294fc5e4cc10902"
+  },
+  "fullName": "Le Van A",
+  "email": "levana5@gmail.com",
+  "password": "9a093e46c670a4e29073f3f313a7bad4",
+  "tokenUser": "ipuUnnWks4WPO9pRaCZzNQcBsneNPH",
+  "avatar": "https://res.cloudinary.com/dddqj4xho/image/upload/v1722671580/0d64989794b1a4c9d89bff571d3d5842_jrbalx.jpg",
+  "status": "active",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-02-15T03:58:51.558Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-27T02:49:00.328Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b03b3f615f3e3ea8cf513c"
+  },
+  "fullName": "Le Van A",
+  "email": "levana6@gmail.com",
+  "password": "9a093e46c670a4e29073f3f313a7bad4",
+  "tokenUser": "L1ZjolCV65sfzehTsuRmopwIMyGd66",
+  "avatar": "https://res.cloudinary.com/dddqj4xho/image/upload/v1722671580/0d64989794b1a4c9d89bff571d3d5842_jrbalx.jpg",
+  "status": "active",
+  "deleted": true,
+  "createdAt": {
+    "$date": "2025-02-15T06:59:11.361Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T15:28:26.011Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b9275b618636b2a523019e"
+  },
+  "fullName": "Thi Beo",
+  "email": "thibeo123@gmail.com",
+  "password": "9a093e46c670a4e29073f3f313a7bad4",
+  "tokenUser": "pFi0YW5n32CSePLXHo4hVAhKrGZ65P",
+  "avatar": "https://res.cloudinary.com/dddqj4xho/image/upload/v1722671580/0d64989794b1a4c9d89bff571d3d5842_jrbalx.jpg",
+  "status": "active",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-02-22T01:24:43.912Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-27T03:41:22.736Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d3e83f15347c986d0ac055"
+  },
+  "fullName": "Tan Sang",
+  "email": "tansang06092004@gamil.com",
+  "password": "601dfbf934a5b4af592ad3ed1cad6d6c",
+  "tokenUser": "ZtVatRStNwzSXwqaOqHl7YZbsf5BLd",
+  "avatar": "https://res.cloudinary.com/dddqj4xho/image/upload/v1722671580/0d64989794b1a4c9d89bff571d3d5842_jrbalx.jpg",
+  "status": "active",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-03-14T08:26:39.534Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-14T08:26:39.534Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "684ed6a650e5f7edab7a3a2c"
+  },
+  "fullName": "Phan Anh",
+  "email": "phananh123@gmail.com",
+  "password": "a49fefc97fe0ab2b5f60ccaf37ceb604",
+  "tokenUser": "UmosSmQQ0tjjffUMDiymaoNioyyXVl",
+  "avatar": "https://res.cloudinary.com/dddqj4xho/image/upload/v1722671580/0d64989794b1a4c9d89bff571d3d5842_jrbalx.jpg",
+  "status": "active",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-15T14:20:22.714Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-15T14:20:22.714Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685212f479ab440e9425071b"
+  },
+  "fullName": "tuấn bùi",
+  "email": "buidinhtuan04@gmail.com",
+  "password": "6621ef275ceac08c34abd89d69e46e11",
+  "tokenUser": "IMQ1AtE7uzikBshDkq3vt4tXSUobGI",
+  "avatar": "https://res.cloudinary.com/dddqj4xho/image/upload/v1722671580/0d64989794b1a4c9d89bff571d3d5842_jrbalx.jpg",
+  "status": "active",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-18T01:14:28.839Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T01:14:28.839Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68537eb69389cca67f07282d"
+  },
+  "fullName": "Nhat Thi",
+  "email": "manjushribuddha@fbclone.com",
+  "password": "9a093e46c670a4e29073f3f313a7bad4",
+  "tokenUser": "OPdO0PJ6PGMMNU2pZpD44TiTQmNaA6",
+  "avatar": "https://res.cloudinary.com/dddqj4xho/image/upload/v1722671580/0d64989794b1a4c9d89bff571d3d5842_jrbalx.jpg",
+  "status": "active",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-19T03:06:30.515Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-19T03:06:30.515Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68537efc9389cca67f07283f"
+  },
+  "fullName": "Thi Beo",
+  "email": "n22dccn080@student.ptithcm.edu.vn",
+  "password": "9a093e46c670a4e29073f3f313a7bad4",
+  "tokenUser": "gedgBgelpfTh880q51mKfwwHQE1PU8",
+  "avatar": "https://res.cloudinary.com/dddqj4xho/image/upload/v1722671580/0d64989794b1a4c9d89bff571d3d5842_jrbalx.jpg",
+  "status": "active",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-19T03:07:40.175Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-19T03:07:40.175Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68537fc89389cca67f072881"
+  },
+  "fullName": "Phan ",
+  "email": "phantruonghoanganh2111@gmail.com",
+  "password": "d4f825709c07a73abd02e5b6e012b246",
+  "tokenUser": "8wIXLG31rLIpE5uCKBpWJIa6JKSb81",
+  "avatar": "https://res.cloudinary.com/dddqj4xho/image/upload/v1722671580/0d64989794b1a4c9d89bff571d3d5842_jrbalx.jpg",
+  "status": "active",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-19T03:11:04.728Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-19T03:39:25.860Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853e88216ada9595d75cec1"
+  },
+  "fullName": "Phan X",
+  "email": "phanx@gmail.com",
+  "password": "9a093e46c670a4e29073f3f313a7bad4",
+  "tokenUser": "widw6Y3ABFhqP3wwn4hHuAum5wesvH",
+  "avatar": "https://res.cloudinary.com/dddqj4xho/image/upload/v1722671580/0d64989794b1a4c9d89bff571d3d5842_jrbalx.jpg",
+  "status": "active",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-19T10:37:54.212Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-19T10:37:54.212Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68d80ba55d68d1e503f7c64c"
+  },
+  "fullName": "aaaa",
+  "email": "aa@gmail.com",
+  "password": "7efd08ecec4a1a3c53ba8dd42167a6ba",
+  "tokenUser": "36KIvEZgeB3OBeqvRjs81OOKtoa9Uu",
+  "avatar": "https://res.cloudinary.com/dddqj4xho/image/upload/v1722671580/0d64989794b1a4c9d89bff571d3d5842_jrbalx.jpg",
+  "status": "active",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-09-27T16:07:01.683Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-27T16:07:01.683Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e685c42968232b9cfd56ab"
+  },
+  "fullName": "phong",
+  "email": "nguyenthanhphong120104@gmail.com",
+  "password": "22780eb034822b7adcb3bedf4d0b4d4f",
+  "tokenUser": "7hUH8LeAHggms7bQ0XzkqtutOBmIsr",
+  "avatar": "https://res.cloudinary.com/dddqj4xho/image/upload/v1722671580/0d64989794b1a4c9d89bff571d3d5842_jrbalx.jpg",
+  "status": "active",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-10-08T15:39:48.807Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-08T15:39:48.807Z"
+  },
+  "__v": 0
+}]

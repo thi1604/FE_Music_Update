@@ -1,0 +1,138 @@
+[{
+  "_id": {
+    "$oid": "67c06f93e8821d09f996466b"
+  },
+  "fullName": "Thi Béo",
+  "email": "thibeo1604@gmail.com",
+  "phone": "0397130248",
+  "password": "e10adc3949ba59abbe56e057f20f883e",
+  "token": "2Ca5aiOntGGGhlApHHhseZVRfbpqgw",
+  "avatar": "http://res.cloudinary.com/dddqj4xho/image/upload/v1740664723/rnmjzcncjbwqqchy03wi.jpg",
+  "role_id": "67c0610c4d1ae0eaa7649b32",
+  "roleName": "Quản trị viên",
+  "status": "active",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-02-27T13:58:43.040Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-27T16:06:29.318Z"
+  },
+  "__v": 0,
+  "idPersonUpdated": "67c06f93e8821d09f996466b"
+},
+{
+  "_id": {
+    "$oid": "67c07010e8821d09f9964675"
+  },
+  "fullName": "Em Béoo",
+  "email": "myanh@gmail.com",
+  "phone": "1234566",
+  "password": "c4ca4238a0b923820dcc509a6f75849b",
+  "token": "xLovIN9Jpjlk5wtsRLQ0zFoQrhmsLN",
+  "avatar": "http://res.cloudinary.com/dddqj4xho/image/upload/v1740664848/fgcaso2caymbsja6qpjv.jpg",
+  "role_id": "67c062fb570d8aad39e5d7e2",
+  "roleName": "Quản lí ca sĩ",
+  "status": "active",
+  "deleted": true,
+  "createdAt": {
+    "$date": "2025-02-27T14:00:48.043Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-15T14:06:47.563Z"
+  },
+  "__v": 0,
+  "idPersonDeleted": "67c06f93e8821d09f996466b"
+},
+{
+  "_id": {
+    "$oid": "67d3e90215347c986d0ac0df"
+  },
+  "fullName": "Sang",
+  "email": "sang123@gmail.com",
+  "phone": "123123123",
+  "password": "c4ca4238a0b923820dcc509a6f75849b",
+  "token": "H8bv2TqgxOzWGU0Nk3kN5payW1Nj3z",
+  "role_id": "67c062fb570d8aad39e5d7e2",
+  "roleName": "Quản lí ca sĩ",
+  "idPersonCreated": "67c06f93e8821d09f996466b",
+  "status": "inactive",
+  "deleted": true,
+  "createdAt": {
+    "$date": "2025-03-14T08:29:54.626Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-15T14:06:29.730Z"
+  },
+  "__v": 0,
+  "idPersonDeleted": "67c06f93e8821d09f996466b"
+},
+{
+  "_id": {
+    "$oid": "68159990cb74867ab033b90f"
+  },
+  "fullName": "Đình Tuấn",
+  "email": "dinhtuan123@gmail.com",
+  "phone": "0123456789",
+  "password": "25f9e794323b453885f5181f1b624d0b",
+  "token": "7eC0rwdKCyHjGmV8ckMY1lfaeomuSP",
+  "role_id": "67c0610c4d1ae0eaa7649b32",
+  "roleName": "Quản trị viên",
+  "idPersonCreated": "67c06f93e8821d09f996466b",
+  "status": "active",
+  "deleted": true,
+  "createdAt": {
+    "$date": "2025-05-03T04:20:32.976Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-19T10:02:38.031Z"
+  },
+  "__v": 0,
+  "idPersonDeleted": "67c06f93e8821d09f996466b"
+},
+{
+  "_id": {
+    "$oid": "684ed35250e5f7edab7a387f"
+  },
+  "fullName": "Phan Anh",
+  "email": "phananh123@gmail.com",
+  "phone": "",
+  "password": "202cb962ac59075b964b07152d234b70",
+  "token": "HDlVMzyuQlTuJ7dIS4Ay1rjPY22erB",
+  "role_id": "67d4e77230df5c9661446a3b",
+  "roleName": "quản trị viên 2",
+  "idPersonCreated": "67c06f93e8821d09f996466b",
+  "status": "active",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-15T14:06:10.238Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-15T14:06:10.238Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853b65816ada9595d75c658"
+  },
+  "fullName": "Thi Beo2",
+  "email": "beo2@gmail.com",
+  "phone": "123123123",
+  "password": "202cb962ac59075b964b07152d234b70",
+  "token": "umcvNEMPGzJtX1uwfm3FCoyZnPN8cb",
+  "avatar": "http://res.cloudinary.com/dddqj4xho/image/upload/v1750316632/y4i8vwbvjc7kvwixtrrj.jpg",
+  "role_id": "67d4e77230df5c9661446a3b",
+  "roleName": "Quản trị viên",
+  "idPersonCreated": "67c06f93e8821d09f996466b",
+  "status": "active",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-19T07:03:52.872Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-19T07:06:13.317Z"
+  },
+  "__v": 0,
+  "idPersonUpdated": "67c06f93e8821d09f996466b"
+}]

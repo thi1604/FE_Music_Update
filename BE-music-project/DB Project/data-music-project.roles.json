@@ -1,0 +1,136 @@
+[{
+  "_id": {
+    "$oid": "67c0610c4d1ae0eaa7649b32"
+  },
+  "title": "Quản trị viên",
+  "description": "Quản trị trang web",
+  "permissions": [
+    "songs-category_view",
+    "songs-category_create",
+    "songs-category_edit",
+    "songs-category_delete",
+    "songs_view",
+    "songs_create",
+    "songs_edit",
+    "songs_delete",
+    "singers_view",
+    "singers_create",
+    "singers_edit",
+    "singers_delete",
+    "roles_view",
+    "roles_create",
+    "roles_edit",
+    "roles_delete",
+    "roles_permissions",
+    "accounts_view",
+    "accounts_create",
+    "accounts_edit",
+    "accounts_delete",
+    "users_view",
+    "users_edit",
+    "users_delete",
+    "trash_view",
+    "trash_edit",
+    "trash_delete",
+    "setting_view",
+    "setting_edit"
+  ],
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-02-27T12:56:44.415Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-19T07:06:55.659Z"
+  },
+  "__v": 0,
+  "idPersonUpdated": "67c07010e8821d09f9964675"
+},
+{
+  "_id": {
+    "$oid": "67c062fb570d8aad39e5d7e2"
+  },
+  "title": "Quản lí ca sĩ",
+  "description": "Quản lí ca sĩ trang web",
+  "permissions": [
+    "songs-category_view",
+    "songs-category_edit",
+    "songs_view",
+    "songs_create",
+    "singers_view",
+    "singers_create",
+    "singers_edit",
+    "roles_view",
+    "accounts_view",
+    "users_view"
+  ],
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-02-27T13:04:59.290Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-19T07:06:55.659Z"
+  },
+  "__v": 0,
+  "idPersonDeleted": "67c06f93e8821d09f996466b"
+},
+{
+  "_id": {
+    "$oid": "67c06a9826a9967b213ecd6b"
+  },
+  "title": "Trum Web",
+  "description": "Trum Web",
+  "permissions": [
+    "songs-category_view",
+    "songs-category_create",
+    "songs-category_edit",
+    "songs-category_delete",
+    "songs_view",
+    "songs_create",
+    "songs_edit",
+    "songs_delete",
+    "singers_view",
+    "singers_create",
+    "singers_delete",
+    "roles_view"
+  ],
+  "deleted": true,
+  "createdAt": {
+    "$date": "2025-02-27T13:37:28.518Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T10:26:08.326Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d4e77230df5c9661446a3b"
+  },
+  "title": "quản trị viên 2",
+  "description": "quản trị viên 2",
+  "permissions": [
+    "songs-category_view",
+    "songs-category_edit",
+    "songs_view",
+    "songs_create",
+    "songs_edit",
+    "songs_delete",
+    "singers_view",
+    "singers_create",
+    "singers_edit",
+    "singers_delete",
+    "roles_view",
+    "accounts_view",
+    "users_view",
+    "setting_view"
+  ],
+  "idPersonCreated": "67c06f93e8821d09f996466b",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-03-15T02:35:30.958Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-19T07:06:55.659Z"
+  },
+  "__v": 0
+}]

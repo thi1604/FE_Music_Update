@@ -1,0 +1,150 @@
+[{
+  "_id": {
+    "$oid": "67b88f8b88fa955962c3c6bd"
+  },
+  "isGetOTP": false,
+  "userId": "66f2b879133786092309e295",
+  "updatedAt": {
+    "$date": "2025-02-25T04:38:59.952Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b9275c618636b2a52301a0"
+  },
+  "userId": "67b9275b618636b2a523019e",
+  "isGetOTP": false,
+  "createdAt": {
+    "$date": "2025-02-22T01:24:44.089Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-22T01:24:44.089Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d3e83f15347c986d0ac057"
+  },
+  "userId": "67d3e83f15347c986d0ac055",
+  "isGetOTP": false,
+  "createdAt": {
+    "$date": "2025-03-14T08:26:39.692Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-14T08:26:39.692Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "684ed6a650e5f7edab7a3a2e"
+  },
+  "userId": "684ed6a650e5f7edab7a3a2c",
+  "isGetOTP": false,
+  "createdAt": {
+    "$date": "2025-06-15T14:20:22.870Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-15T14:20:22.870Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685212f579ab440e9425071d"
+  },
+  "userId": "685212f479ab440e9425071b",
+  "isGetOTP": false,
+  "createdAt": {
+    "$date": "2025-06-18T01:14:29.001Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-18T01:14:29.001Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68537eb69389cca67f07282f"
+  },
+  "userId": "68537eb69389cca67f07282d",
+  "isGetOTP": false,
+  "createdAt": {
+    "$date": "2025-06-19T03:06:30.673Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-19T03:06:30.673Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68537efc9389cca67f072841"
+  },
+  "userId": "68537efc9389cca67f07283f",
+  "isGetOTP": false,
+  "createdAt": {
+    "$date": "2025-06-19T03:07:40.325Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-19T03:07:40.325Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68537fc89389cca67f072883"
+  },
+  "userId": "68537fc89389cca67f072881",
+  "isGetOTP": false,
+  "createdAt": {
+    "$date": "2025-06-19T03:11:04.878Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-19T03:11:04.878Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853e88216ada9595d75cec3"
+  },
+  "userId": "6853e88216ada9595d75cec1",
+  "isGetOTP": true,
+  "createdAt": {
+    "$date": "2025-06-19T10:37:54.367Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-19T10:40:46.447Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68d80ba55d68d1e503f7c64e"
+  },
+  "userId": "68d80ba55d68d1e503f7c64c",
+  "isGetOTP": false,
+  "createdAt": {
+    "$date": "2025-09-27T16:07:01.839Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-27T16:07:01.839Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e685c42968232b9cfd56ad"
+  },
+  "userId": "68e685c42968232b9cfd56ab",
+  "isGetOTP": false,
+  "createdAt": {
+    "$date": "2025-10-08T15:39:48.965Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-08T15:39:48.965Z"
+  },
+  "__v": 0
+}]
