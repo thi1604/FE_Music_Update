@@ -29,7 +29,7 @@ export const detail = async (req: Request, res: Response) => {
 
     // Tìm các bài hát tương tự sử dụng KNN
     const similarSongs = await findSimilarSongs(song, 5);
-    
+
     for (const similarSong of similarSongs) {
       const singers = await singerModel.find({
         _id: { $in: similarSong.singerIds },
@@ -89,19 +89,19 @@ export const detail = async (req: Request, res: Response) => {
   res.json({
     songCurrent: song,
     singer: singers,
-    topicSlug: slugTopic.slug,
+    topicSlug: slugTopic?.slug || '',
     recommendedSongs: recommendedSongs
   })
 }
 
 export const topSongs = async (req: Request, res: Response) => {
   const listTopSongs = await songModel
-  .find({
-    deleted: false,
-    status: "active"
-  }).sort({ listenNumber: "desc" })
-  .limit(3)
-  .select("title avatar singerIds slug listenNumber audio");
+    .find({
+      deleted: false,
+      status: "active"
+    }).sort({ listenNumber: "desc" })
+    .limit(3)
+    .select("title avatar singerIds slug listenNumber audio");
   const dataFinal = [];
   for (const item of listTopSongs) {
     const singers = await singerModel.find({
@@ -312,12 +312,12 @@ export const checkLoveSong = async (req: Request, res: Response) => {
       songId: songCurrent.id
     })
 
-    if(checkLove){
+    if (checkLove) {
       res.json({
         code: 200
       });
     }
-    else{
+    else {
       res.json({
         code: 400
       });
@@ -389,10 +389,10 @@ export const search = async (req: Request, res: Response) => {
     }
 
     // Thêm gợi ý bài hát tương tự dựa trên KNN
-    if (songs.length > 0) {
+    if (keyword != '' || songs.length > 0) {
       // Lấy bài hát đầu tiên làm mẫu để tìm các bài hát tương tự, truyền từ khóa tìm kiếm
       const similarSongs = await findSimilarSongs(songs[0], 5, keyword);
-      
+
       // Lọc bỏ các bài hát đã có trong kết quả tìm kiếm
       const songIds = songs.map(song => song._id.toString());
       const filteredSimilarSongs = similarSongs.filter(
@@ -431,7 +431,7 @@ export const search = async (req: Request, res: Response) => {
 
 export const randomSong = async (req: Request, res: Response) => {
   const slugCurrent = req.body.slugSong;
-  
+
   // Lấy bài hát hiện tại
   const currentSong = await songModel.findOne({
     slug: slugCurrent,
@@ -442,7 +442,7 @@ export const randomSong = async (req: Request, res: Response) => {
   if (currentSong) {
     // Sử dụng KNN để tìm bài hát tương tự
     const similarSongs = await findSimilarSongs(currentSong, 10);
-    
+
     // Chọn ngẫu nhiên 1 bài hát từ danh sách các bài hát tương tự
     const randomIndex = Math.floor(Math.random() * similarSongs.length);
     const selectedSong = similarSongs[randomIndex];
@@ -474,7 +474,7 @@ export const randomSong = async (req: Request, res: Response) => {
     const listSongs = await songModel.find({
       deleted: false,
       status: "active",
-      slug: { $ne: slugCurrent}
+      slug: { $ne: slugCurrent }
     });
 
     const index = Math.floor(Math.random() * listSongs.length);
@@ -511,12 +511,12 @@ export const randomSongLogin = async (req: Request, res: Response) => {
     tokenUser: req.body.tokenUser,
     status: "active"
   }).select("fullName");
-  
+
   const song = await songModel.findOne({
     slug: slugSong
   }).select("title");
 
-  if(song && user){
+  if (song && user) {
     const data = {
       userId: user.id,
       songIds: song.id
@@ -524,13 +524,13 @@ export const randomSongLogin = async (req: Request, res: Response) => {
     const listSongCurrent = await listSongsModel.findOne({
       userId: user.id
     });
-    if(listSongCurrent){
+    if (listSongCurrent) {
       await listSongsModel.updateOne(
-        {userId: user.id},
-        {$push: {songIds : song.id}}
+        { userId: user.id },
+        { $push: { songIds: song.id } }
       );
     }
-    else{
+    else {
       const newListSongs = new listSongsModel(data);
       await newListSongs.save();
     }

@@ -25,7 +25,7 @@ export const calculateDistance = (song1: SongFeatures, song2: SongFeatures, targ
 
   // So sánh topic
   if (song1.topicId !== song2.topicId) distance += 0.5; // Giảm trọng số của topic
-  
+
   // So sánh singers (tính tỷ lệ ca sĩ trùng nhau)
   const commonSingers = song1.singerIds.filter(id => song2.singerIds.includes(id));
   const singerSimilarity = commonSingers.length / Math.max(song1.singerIds.length, song2.singerIds.length);
@@ -39,7 +39,7 @@ export const calculateDistance = (song1: SongFeatures, song2: SongFeatures, targ
       distance += emotionDistance * 2; // Tăng trọng số cho cảm xúc mục tiêu
     } else {
       // So sánh tất cả các cảm xúc
-      const emotionDistance = 
+      const emotionDistance =
         Math.pow(song1.emotions.sad - song2.emotions.sad, 2) +
         Math.pow(song1.emotions.happy - song2.emotions.happy, 2) +
         Math.pow(song1.emotions.chill - song2.emotions.chill, 2);
@@ -62,21 +62,78 @@ export const findSimilarSongs = async (
   searchKeyword?: string
 ): Promise<any[]> => {
   try {
-    // Lấy tất cả bài hát từ database
-    const allSongs = await Song.find({ deleted: false, status: "active" });
+    // Nếu có targetSong, thực hiện logic cũ
+    if (targetSong) {
+      const allSongs = await Song.find({ deleted: false, status: "active" });
+      const targetEmotion = searchKeyword ? getEmotionFromKeyword(searchKeyword) : null;
+      const targetEmotions = targetSong?.lyrics ? analyzeLyricEmotion(targetSong.lyrics) : null;
 
-    // Xác định cảm xúc mục tiêu từ từ khóa tìm kiếm nếu có
-    const targetEmotion = searchKeyword ? getEmotionFromKeyword(searchKeyword) : null;
+      const distances = allSongs
+        .filter((song) => song._id.toString() !== targetSong?._id.toString())
+        .map((song) => {
+          const songEmotions = song.lyrics ? analyzeLyricEmotion(song.lyrics) : null;
+          const distance = calculateDistance(
+            {
+              topicId: song.topicId.toString(),
+              singerIds: song.singerIds.map((id: any) => id.toString()),
+              listenNumber: song.listenNumber || 0,
+              like: song.like || 0,
+              emotions: songEmotions
+            },
+            {
+              topicId: targetSong.topicId.toString(),
+              singerIds: targetSong.singerIds.map((id: any) => id.toString()),
+              listenNumber: targetSong.listenNumber || 0,
+              like: targetSong.like || 0,
+              emotions: targetEmotions
+            },
+            targetEmotion
+          );
+          return { song, distance };
+        });
 
-    // Phân tích cảm xúc của bài hát mục tiêu
-    const targetEmotions = targetSong.lyrics ? analyzeLyricEmotion(targetSong.lyrics) : null;
+      const nearestSongs = distances
+        .sort((a, b) => a.distance - b.distance)
+        .slice(0, k)
+        .map((item) => item.song);
 
-    // Tính khoảng cách từ bài hát mục tiêu đến tất cả bài hát khác
-    const distances = allSongs
-      .filter((song) => song._id.toString() !== targetSong._id.toString())
-      .map((song) => {
-        // Phân tích cảm xúc của bài hát so sánh
+      return nearestSongs;
+    }
+    // Nếu chỉ có searchKeyword, tìm bài hát theo từ khóa
+    else if (searchKeyword) {
+      const songs = await Song.find({
+        deleted: false,
+        status: "active",
+        $or: [
+          { name: { $regex: searchKeyword, $options: "i" } },
+          { singerNames: { $regex: searchKeyword, $options: "i" } },
+          { lyrics: { $regex: searchKeyword, $options: "i" } } // Thêm điều kiện tìm trong lời bài hát
+        ]
+      }).limit(k);
+
+      // Nếu tìm được bài hát thì trả về luôn
+      if (songs.length > 0) {
+        return songs;
+      }
+
+      // Nếu không tìm được bài hát, tìm theo cảm xúc từ keysearch
+      const allSongs = await Song.find({ deleted: false, status: "active" });
+      const targetEmotion = getEmotionFromKeyword(searchKeyword);
+      console.log("Target Emotion from keyword:", targetEmotion);
+      // Nếu không xác định được cảm xúc thì trả về rỗng
+      if (!targetEmotion) return [];
+
+      const distances = allSongs.map((song) => {
         const songEmotions = song.lyrics ? analyzeLyricEmotion(song.lyrics) : null;
+        // Tạo một object giả làm target chỉ có cảm xúc mục tiêu
+        const fakeTarget: SongFeatures = {
+          topicId: "",
+          singerIds: [],
+          listenNumber: 0,
+          like: 0,
+          emotions: { sad: 0, happy: 0, chill: 0 }
+        };
+        fakeTarget.emotions[targetEmotion] = 1; // Đặt cảm xúc mục tiêu cao nhất
 
         const distance = calculateDistance(
           {
@@ -86,25 +143,23 @@ export const findSimilarSongs = async (
             like: song.like || 0,
             emotions: songEmotions
           },
-          {
-            topicId: targetSong.topicId.toString(),
-            singerIds: targetSong.singerIds.map((id: any) => id.toString()),
-            listenNumber: targetSong.listenNumber || 0,
-            like: targetSong.like || 0,
-            emotions: targetEmotions
-          },
+          fakeTarget,
           targetEmotion
         );
         return { song, distance };
       });
 
-    // Sắp xếp theo khoảng cách và lấy k bài hát gần nhất
-    const nearestSongs = distances
-      .sort((a, b) => a.distance - b.distance)
-      .slice(0, k)
-      .map((item) => item.song);
+      const nearestSongs = distances
+        .sort((a, b) => a.distance - b.distance)
+        .slice(0, k)
+        .map((item) => item.song);
 
-    return nearestSongs;
+      return nearestSongs;
+    }
+    // Nếu không có gì, trả về mảng rỗng
+    else {
+      return [];
+    }
   } catch (error) {
     console.error("Error in findSimilarSongs:", error);
     return [];
