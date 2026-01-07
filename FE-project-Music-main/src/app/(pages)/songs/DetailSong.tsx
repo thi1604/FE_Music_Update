@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   description: "Mô tả chi tiết bài hát, ca sĩ, lời bài hát",
 };
 
-export const DetailSong = (props:any) => {
+export const DetailSong = (props: any) => {
 
   const slugSong = props.data;
 
@@ -55,7 +55,7 @@ export const DetailSong = (props:any) => {
         const songDetailRes = await fetch(`${base_url}/songs/detail/${slugSong}`);
         const songDetailData = await songDetailRes.json();
         setData(songDetailData);
-        
+
         // 2. Lấy bài hát cùng chủ đề
         const topicSlug = songDetailData.topicSlug;
         const topicRes = await fetch(`${base_url}/topics/${topicSlug}`);
@@ -79,12 +79,12 @@ export const DetailSong = (props:any) => {
   } : {};
 
   // Xử lý lời bài hát
-  const lyric = dataSec1 ? 
-    dataSec1.songCurrent.lyrics || "Chưa cập nhật lời bài hát!" 
+  const lyric = dataSec1 ?
+    dataSec1.songCurrent.lyrics || "Chưa cập nhật lời bài hát!"
     : "";
 
   // Xử lý danh sách bài hát cùng chủ đề
-  const listSongs = dataSec2 ? dataSec2.listSongs.map(item => ({
+  const listSongs = dataSec2 ? dataSec2.listSongs?.map(item => ({
     songName: item.title,
     timeSong: item.totalTime,
     img: item.avatar,
@@ -119,25 +119,25 @@ export const DetailSong = (props:any) => {
 
   return (
     <>
-     {/* Section-1 */}
-     <BoxTitle data = {dataBoxHead}/>
+      {/* Section-1 */}
+      <BoxTitle data={dataBoxHead} />
       {/* Section-2 */}
-      <Title text="Lời Bài Hát"/>
+      <Title text="Lời Bài Hát" />
       {/* <div className="rounded-[15px] bg-[#212121] p-[20px] whitespace-pre-line">
         {parse(lyric)}
       </div> */}
       {/* <LyricSong lyric={lyric}/> */}
       <Suspense>
-        {lyric && <LyricSong lyric={lyric}/>}
+        {lyric && <LyricSong lyric={lyric} />}
       </Suspense>
       {/* Section-3: Bài hát gợi ý */}
       {dataSec1?.recommendedSongs && dataSec1.recommendedSongs.length > 0 && (
         <>
-          <Title text="Có Thể Bạn Sẽ Thích"/>
+          <Title text="Có Thể Bạn Sẽ Thích" />
           <div className="grid grid-cols-1 gap-y-[10px] mb-8">
             {dataSec1.recommendedSongs.map((item, index) => (
-              <ItemSong2 
-                key={index} 
+              <ItemSong2
+                key={index}
                 data={{
                   songName: item.title,
                   timeSong: item.totalTime || "",
@@ -154,12 +154,12 @@ export const DetailSong = (props:any) => {
           </div>
         </>
       )}
-      
+
       {/* Section-4: Bài hát cùng danh mục */}
-      <Title text="Bài Hát Cùng Danh Mục"/>
+      <Title text="Bài Hát Cùng Danh Mục" />
       <div className="grid grid-cols-1 gap-y-[10px]">
         {listSongs && listSongs.map((item, index) => (
-          <ItemSong2 data={item} key={index}/>
+          <ItemSong2 data={item} key={index} />
         ))}
       </div>
     </>

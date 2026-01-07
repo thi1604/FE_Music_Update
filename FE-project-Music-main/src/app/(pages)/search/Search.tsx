@@ -1,8 +1,9 @@
 import { base_url } from "@/app/components/global";
 import { ItemSong2 } from "@/app/components/ItemSong/ItemSong2";
 import { Title } from "@/app/components/Title/Title";
+import useDebounce from "@/app/hooks/useDebounce";
 import { Metadata } from "next";
-import {useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export const metadata: Metadata = {
   title: "Kết quả tìm kiếm",
@@ -17,23 +18,24 @@ interface SearchData {
 export const SearchResult = (props: any) => {
   const keyword = props.data;
   const [data, setData] = useState<SearchData | null>(null);
+  const debouncedKeyword = useDebounce(keyword, 400);
 
   useEffect(() => {
     // Lay du lieu bai hat tu keyword
     async function fetchDataSearch() {
-      await fetch(`${base_url}/songs/search/${keyword}`,{
+      await fetch(`${base_url}/songs/search/${debouncedKeyword}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
         },
       })
-      .then(res=> res.json())
-      .then((data => {
-        setData(data);
-      }));
+        .then(res => res.json())
+        .then((data => {
+          setData(data);
+        }));
     }
     fetchDataSearch();
-  }, [keyword]);
+  }, [debouncedKeyword]);
 
   // Xử lý kết quả tìm kiếm chính
   const listSongs = data?.songs?.map(item => ({
@@ -64,13 +66,13 @@ export const SearchResult = (props: any) => {
   return (
     <>
       {/* Kết quả tìm kiếm chính */}
-      <Title text={`Kết Quả Tìm Kiếm: "${keyword}"`}/>
+      <Title text={`Kết Quả Tìm Kiếm: "${keyword}"`} />
       <div className="grid grid-cols-1 gap-y-[10px] mb-8">
-        {listSongs.length > 0 ? 
+        {listSongs.length > 0 ?
           listSongs.map((item, index) => (
-            <ItemSong2 data={item} key={index}/>
+            <ItemSong2 data={item} key={index} />
           ))
-        :
+          :
           <div className="text-[16px] font-[300] text-[#FFFFFF] italic">
             Không tìm thấy bài hát phù hợp!
           </div>
@@ -80,10 +82,10 @@ export const SearchResult = (props: any) => {
       {/* Kết quả gợi ý */}
       {recommendedSongs.length > 0 && (
         <>
-          <Title text="Có Thể Bạn Quan Tâm"/>
+          <Title text="Có Thể Bạn Quan Tâm" />
           <div className="grid grid-cols-1 gap-y-[10px]">
             {recommendedSongs.map((item, index) => (
-              <ItemSong2 data={item} key={index}/>
+              <ItemSong2 data={item} key={index} />
             ))}
           </div>
         </>
