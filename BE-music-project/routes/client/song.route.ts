@@ -1,7 +1,8 @@
-import express  from "express";
+import express from "express";
 const route = express.Router();
-import {infoUser}  from "../../middlewares/client/user-middleware";
-
+import { infoUser } from "../../middlewares/client/user-middleware";
+import multer from "multer";
+const upload = multer({ dest: "uploads/", limits: { fileSize: 20 * 1024 * 1024 } });
 import * as controller from "../../controller/client/songs.controller";
 
 // route.get("/", controller.index);
@@ -28,5 +29,6 @@ route.patch("/random", controller.randomSong);
 
 route.patch("/listen/:slugSong", controller.listenNumberPatch);
 
+route.post("/api/recognize-audio", upload.single("audio"), controller.recognizeAudio);
 
 export const routeSong = route;

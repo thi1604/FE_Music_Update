@@ -1,8 +1,8 @@
-import express, {Express, Request, Response} from "express";
-import {connect} from "./config/database";
+import express, { Express, Request, Response } from "express";
+import { connect } from "./config/database";
 import dotenv from "dotenv";
-import {prefixAdmin} from "./config/system";
-import {routesClient} from "./routes/client/index.route";
+import { prefixAdmin } from "./config/system";
+import { routesClient } from "./routes/client/index.route";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import methodOverride from "method-override";
@@ -11,13 +11,15 @@ import flash from "express-flash";
 import { routesAdmin } from "./routes/admin/index.route";
 import path from "path";
 import cors from "cors";
+import multer from "multer";
 
 dotenv.config();
 
-const app : Express = express();
-const port : number | string = process.env.PORT;
+const app: Express = express();
+const port: number | string = process.env.PORT;
 app.use(cookieParser('ThiBeo'));
 app.use(express.static(`${__dirname}/public`)); // Nhung folder FE vao project
+
 
 connect();
 
@@ -55,7 +57,7 @@ declare global {
 
 app.use(flash());
 // End Nhung flash
-
+// routesClient(app);
 // parse application/json
 app.use(bodyParser.json())
 // bodyParser
@@ -67,6 +69,7 @@ app.use(methodOverride('_method'));
 // tinyMCE
 app.use('/tinymce', express.static(path.join(__dirname, 'node_modules', 'tinymce')));
 
+// routesClient(app);
 routesClient(app);
 routesAdmin(app);
 

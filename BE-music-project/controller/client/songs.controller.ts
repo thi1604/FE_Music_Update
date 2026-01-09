@@ -8,6 +8,9 @@ import { userModel } from "../../models/user.model";
 import { topicModel } from "../../models/topics.model";
 import { listSongsModel } from "../../models/listSong.model";
 import { findSimilarSongs } from "../../helper/knn.helper";
+import axios from "axios";
+import FormData from "form-data";
+import fs from "fs";
 
 export const detail = async (req: Request, res: Response) => {
   const slugSong: string = req.params.slugSong;
@@ -579,3 +582,118 @@ export const listenNumberPatch = async (req: Request, res: Response) => {
     });
   }
 }
+
+export const recognizeAudio = async (req: Request, res: Response) => {
+  const filePath = req.file?.path;
+
+  try {
+    console.log("--- Bắt đầu nhận diện audio (Phiên bản sửa triệt để) ---");
+
+    // 1. Kiểm tra file từ Multer
+    if (!req.file || !filePath) {
+      return res.status(400).json({ code: 400, message: "Không tìm thấy file ghi âm!" });
+    }
+
+    const apiToken = "718209c50f061ef2cd8ee98ef292264a";
+
+    // 2. Đọc file vào Buffer thay vì Stream để đảm bảo dữ liệu không bị rỗng
+    const fileBuffer = fs.readFileSync(filePath);
+    console.log(`Dung lượng file nhận được: ${fileBuffer.length} bytes`);
+
+    if (fileBuffer.length === 0) {
+      throw new Error("File ghi âm không có dữ liệu (0 bytes).");
+    }
+
+    // 3. Khởi tạo FormData chuẩn
+    const formData = new FormData();
+
+    // Append file kèm metadata rõ ràng (filename và contentType cực kỳ quan trọng)
+    formData.append("file", fileBuffer, {
+      filename: req.file.originalname || "recording.webm",
+      contentType: req.file.mimetype || "audio/webm",
+    });
+
+    formData.append("return", "apple_music,spotify");
+
+    console.log("Đang gửi dữ liệu tới AudD API...");
+
+    // 4. Gửi request POST
+    // Đưa api_token lên URL (?api_token=...) là cách an toàn nhất để tránh lỗi 901
+    const response = await axios.post(
+      `https://api.audd.io/?api_token=${apiToken}`,
+      formData,
+      {
+        headers: {
+          ...formData.getHeaders(), // Tự động tạo boundary chuẩn cho multipart/form-data
+        },
+        maxContentLength: Infinity,
+        maxBodyLength: Infinity,
+      }
+    );
+
+    // 5. Kiểm tra phản hồi từ AudD
+    if (response.data.status === "error") {
+      console.error("AudD API Error:", response.data.error.error_message);
+      return res.status(400).json({
+        code: 400,
+        message: response.data.error.error_message
+      });
+    }
+
+    const songData = response.data.result;
+
+    if (!songData) {
+      console.log("AudD không tìm thấy bài hát khớp.");
+      return res.status(200).json({ code: 404, message: "Không nhận diện được bài hát!" });
+    }
+
+    console.log("Nhận diện thành công:", songData.title);
+
+    // 6. Xử lý Logic Database
+    // Tạo slug sạch từ title của AudD để tìm trong DB của bạn
+    const rawTitle = songData.title || "";
+    const songTitleSlug = unidecode(rawTitle)
+      .trim()
+      .replace(/\s+/g, "-")
+      .toLowerCase()
+      .replace(/[^\w-]+/g, ""); // Xóa ký tự đặc biệt
+
+    console.log(songTitleSlug);
+
+    // Giả sử bạn tìm bài hát theo slug
+    const song = await songModel.findOne({
+      slug: { $regex: songTitleSlug, $options: "i" },
+      deleted: false,
+      status: "active"
+    });
+    // const song = null; // Thay bằng lệnh find thực tế của bạn
+
+    console.log(song)
+
+    // 7. Trả về kết quả cuối cùng
+    return res.status(200).json({
+      code: song ? 200 : 404,
+      message: song ? "Tìm thấy bài hát trong hệ thống!" : "Bài hát chưa có trong hệ thống!",
+      song: song,
+      audd_info: songData // Luôn trả về thông tin từ AudD để user biết là bài gì
+    });
+
+  } catch (error: any) {
+    console.error("Lỗi Server:", error.response?.data || error.message);
+    return res.status(500).json({
+      code: 500,
+      message: "Có lỗi xảy ra trong quá trình xử lý!",
+      error: error.message
+    });
+  } finally {
+    // 8. Dọn dẹp: Luôn xóa file tạm sau khi xử lý xong để tránh đầy ổ cứng
+    if (filePath && fs.existsSync(filePath)) {
+      try {
+        fs.unlinkSync(filePath);
+        console.log("Đã xóa file tạm:", filePath);
+      } catch (err) {
+        console.error("Không thể xóa file tạm:", err);
+      }
+    }
+  }
+};
